@@ -8,25 +8,46 @@ Bonus
 Abbellire con CSS o Bootstrap
 Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le altre)
 */
-function create_li(para) {
+
+//SOLUZIONE CON FUNZIONE CHE NON FUNZIONA
+/*
+function create_li() {
+  let lista = "";
+
   for (let index = 0; index < 10; index++) {
     const cosine = index;
-    console.log(cosine);
-    lista += `<li>${para.data.response}</li>`;
+
+    axios
+      .get("https://flynn.boolean.careers/exercises/api/random/mail")
+      .then((banane) => {
+        lista += `<li>${banane.data.response}</li>`;
+
+      });
   }
 
-  return lista;
+ 
 }
 
-let lista = "";
 const daddyEl = document.getElementById("mail-daddy");
 
-axios
-  .get("https://flynn.boolean.careers/exercises/api/random/mail")
-  .then((banane) => {
-    console.log(banane.data);
-    console.log(banane.data.response);
+daddyEl.innerHTML = create_li();
+*/
 
-    create_li(banane);
-    daddyEl.innerHTML = lista;
-  });
+//SOLUZIONE ALTERNATIVA
+
+const daddyEl = document.getElementById("mail-daddy");
+let lista = "";
+
+for (let index = 0; index < 10; index++) {
+  const cosine = index;
+
+  axios
+    .get("https://flynn.boolean.careers/exercises/api/random/mail")
+    .then((banane) => {
+      console.log(banane.data.response);
+
+      lista += `<li>${banane.data.response}</li>`;
+      daddyEl.innerHTML = lista;
+    });
+  daddyEl.innerHTML = lista;
+}
