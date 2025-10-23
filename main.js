@@ -8,3 +8,11 @@ Bonus
 Abbellire con CSS o Bootstrap
 Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le altre)
 */
+
+const daddyEl = document.getElementById("mail-daddy");
+
+axios
+  .get("https://flynn.boolean.careers/exercises/api/random/mail")
+  .then((banane) => {
+    console.log(banane.data); // i dati ricevuti dal server
+  });
