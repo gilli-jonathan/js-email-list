@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted black; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+     background-image: url(./img/perfectfake.jpg); 
+}
+
+header {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 2rem;
+    color: white;
+    height: 100px;
+    background-color: red;
+}
+
+
+li {
+    text-align: center;
+    padding: 0.5rem ;
+    list-style-type: none;
+   background-color: red;
+   color: white;
+   margin-bottom: 0.5rem;
+   font-size: larger;
+
+    button{
+        margin-top: 7px;
+        padding: 2px;
+        height: 25px;
+
+    }
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+main {
+    position: relative;
+}
+
+.banny {
+    height: 301px ;
+    position: absolute;
+    top: 100px ;
+    left: 500px;
+}
+
+.d-none {
+    display: none;
+}
