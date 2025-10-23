@@ -52,6 +52,13 @@ main {
     left: 500px;
 }
 
+.last-banny {
+    height: 500px;
+    position: absolute;
+    top: 10px;
+    left: 450px;
+}
+
 .d-none {
     display: none;
 }
